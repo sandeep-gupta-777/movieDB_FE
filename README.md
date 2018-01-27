@@ -1,4 +1,4 @@
-# San Francisco Films
+# movieDB_FE
 
 This is the frontend part of this project for enabling users search movies and actors by name. User can also see movies based on their high ratings or release dates.
 
@@ -11,10 +11,10 @@ This is the frontend part of this project for enabling users search movies and a
 1. clone this project (this will take some time since node_modules are also included)
 2. open terminal or cmd. cd into to project root.
 3. Run `ng serve` for a dev server. 
-4. Navigate to `http://localhost:4200/`. 
+4. Navigate to `http://localhost:4200/` in browser. 
 
 ## Features
-1. Searh movies and artists by typing name in search bar
+1. Search movies and artists by typing name in search bar
 2. See top rated movies
 3. See recently released movies
 4. Add or removies movie to Watch list
