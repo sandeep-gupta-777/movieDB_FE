@@ -9,8 +9,9 @@ This is the frontend part of this project for enabling users search movies and a
 
 ## To run this project
 1. clone this project (this will take some time since node_modules are also included)
-2. Run `ng serve` for a dev server. 
-3. Navigate to `http://localhost:4200/`. 
+2. open terminal or cmd. cd into to project root.
+3. Run `ng serve` for a dev server. 
+4. Navigate to `http://localhost:4200/`. 
 
 ## Features
 1. Searh movies and artists by typing name in search bar
