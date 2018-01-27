@@ -8,7 +8,7 @@ This is the frontend part of this project for enabling users search movies and a
 3. Bootstrap 4
 
 ## To run this project
-1. close this project
+1. clone this project (this will take some time since node_modules are also included)
 2. Run `ng serve` for a dev server. 
 3. Navigate to `http://localhost:4200/`. 
 
