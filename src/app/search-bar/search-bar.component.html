@@ -1,0 +1,30 @@
+<div class="container bg-dark" style="width: 100%">
+
+
+  <div class="row border  bg-blackish-custom d-flex justify-content-end " style="height: 55px ">
+
+    <form contentEditable class="py-1" style="position: relative; width: 50%" (keydown)="onKeyDown($event)">
+      <input type="text" name="search" placeholder="Search..." autocomplete="off" [(ngModel)]="keyword">
+    </form>
+
+    <div class="col-4 d-flex align-items-center">
+              <!--dropdown starts-->
+      <div class="dropdown justify-content-end">
+        <button class="btn  btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Search By
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" (click)="search_mode='movie'"
+             [ngClass]="{'bg-dark':search_mode==='movie', 'text-white':search_mode==='movie'}">Movies</a>
+          <a class="dropdown-item" (click)="search_mode='person'"
+             [ngClass]="{'bg-dark':search_mode==='person', 'text-white':search_mode==='person'}">Artists</a>
+        </div>
+      </div>
+      <!--dropdown ends-->
+
+    </div>
+  </div>
+
+
+</div>
+

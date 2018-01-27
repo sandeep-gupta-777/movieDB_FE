@@ -1,0 +1,8 @@
+
+<!--this is for movie search-->
+<div class="container bg-dark mt-3">
+  <h1 class="text-white text-center">{{headingText}}</h1>
+  <div *ngIf="movies.length!==0" >
+    <app-movie-list [movies]="movies"></app-movie-list>
+  </div>
+</div>

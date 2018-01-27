@@ -1,0 +1,41 @@
+
+
+<!--this is for movie search-->
+<div class="container bg-dark mt-3">
+  <div *ngIf="movies.length!==0" class="mb-2">
+    <app-movie-list [movies]="movies"></app-movie-list>
+  </div>
+</div>
+
+<!--this is for artists search-->
+<div class="container bg-dark mt-3" *ngIf="artists.length!==0">
+<!--artist card starts-->
+  <div class="row">
+    <div class="col-4" *ngFor="let artist of artists">
+      <div  class="mb-2">
+        <div >
+          <div class="card" style="width: 20rem;">
+            <img class="card-img-top" [src]="artist.profile_path?(url_prefix + artist.profile_path):artist_image_placeholder" alt="Card image cap">
+            <div class="card-block">
+              <h4 class="card-title p-2">{{artist.name}}</h4>
+              <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Known for: <span class="font-weight-bold">{{artist.known_for[0].original_title}}</span></li>
+              <li class="list-group-item all-movies-link" (click)="searchMoviesForArtist(artist)">See all movies by {{artist.name}}</li>
+            </ul>
+          </div>
+          <!--<app-movie-list [movies]="artist.known_for" ></app-movie-list>-->
+        </div>
+      </div>
+    </div>
+  </div>
+<!--artist card ends-->
+</div>
+
+<div class="container bg-dark mt-3 text-center text-white" *ngIf="showLoading">
+  <h4 class="display-4"><i class="fa fa-spinner fa-spin fa-5x "></i></h4>
+</div>
+<div class="container bg-dark mt-3 text-center text-white" *ngIf="(movies.length===0 && artists.length===0) && showLoading===false">
+  <h4 class="display-4">No Results</h4>
+</div>

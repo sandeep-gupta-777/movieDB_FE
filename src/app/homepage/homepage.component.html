@@ -1,0 +1,22 @@
+<div class="container bg-dark pb-5">
+
+  <div class="row">
+    <div class="col-6">
+      <app-recent-movies [movieMode]="recentMode"></app-recent-movies>
+    </div>
+    <div class="col-6">
+      <!--<app-recent-movies></app-recent-movies>-->
+      <app-recent-movies [movieMode]="topRatedMode"></app-recent-movies>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 text-center ">
+      <a class="text-white" routerLink="top-rated">View all top rated</a>
+    </div>
+    <div class="col-6 text-center">
+      <a class="text-white" routerLink="recent">View all recent</a>
+    </div>
+  </div>
+</div>
+

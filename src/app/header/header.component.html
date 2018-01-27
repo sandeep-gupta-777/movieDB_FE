@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a (click)='homeClicked()' class="navbar-brand"
+       style="font-weight: bold; font-size: 30px;color: white">MovieFinder</a>
+
+    <!--following line will make all links to push to left of
+    logo/brand. so use ml-auto to push it to extream right
+    -->
+    <div class="collapse navbar-collapse" id="menu">
+
+      <ul class="navbar-nav ml-auto">
+
+        <li class="navbar-items">
+          <a  class="nav-link" routerLink="recent">Recent</a>
+        </li>
+        <li class="navbar-items">
+          <a  class="nav-link" routerLink="top-rated">Top rated</a>
+        </li>
+        <li class="navbar-items">
+          <a *ngIf="authService.isUserLoggedIn()"  class="nav-link" routerLink="watchlist">WatchList ({{helperService.getWatchList().length}})</a>
+        </li>
+        <li class="navbar-items">
+          <a *ngIf="!authService.isUserLoggedIn()" class="nav-link" (click)="goToLoginPage()">Login</a>
+          <a *ngIf="authService.isUserLoggedIn()" class="nav-link" (click)="logout()">Logout</a>
+        </li>
+
+
+      </ul>
+    </div>
+
+  </div>
+</nav>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+    <app-search-bar style="width: 100%"></app-search-bar>
+  </div>
+</div>
+

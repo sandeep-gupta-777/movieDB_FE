@@ -1,0 +1,6 @@
+<div class="container bg-dark mt-3">
+  <h1 class="text-white text-center">Your WatchList: {{watchList.length}} items</h1>
+  <div *ngIf="watchList.length!==0" >
+    <app-movie-list [movies]="watchList"></app-movie-list>
+  </div>
+</div>

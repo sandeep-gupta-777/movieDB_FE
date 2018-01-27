@@ -1,0 +1,32 @@
+<div class="container border bg-dark " *ngIf="movie && movie.original_title && showMovieDetailsPanel">
+
+    <div class="row d-flex justify-content-end">
+      <i class="fa fa-times pr-3 mr-3" (click)="showMovieDetailsPanel = false"></i>
+    </div>
+    <div class="card  m-2">
+      <div class="row py-2">
+        <div class="col-md-12 text-center">
+          <img [src]="movie.poster_path?(url_prefix+ movie.poster_path):movie_image_placeholder" alt="" class="img-fluid movie-poster border-blackish-custom">
+        </div>
+        <div class="col-md-12 p-4">
+          <div class="card-block">
+            <h4 class="card-title display-5 d-inline">{{movie.original_title}}</h4>
+            <p class="text-muted p-0 m-0">{{movie.release_date|date:'mediumDate'}}</p>
+            <p class="card-text">{{movie.overview}}</p>
+            <p class="font-weight-bold">Directed by:</p>
+            <ol >
+              <li *ngFor="let director of movie.directors"> {{director}}</li>
+            </ol>
+            <p class="font-weight-bold">Production:</p>
+            <ol >
+              <li *ngFor="let company of movie.production_companies"> {{company.name}}</li>
+            </ol>
+            <p class="font-weight-bold">Cast</p>
+            <ol >
+              <li *ngFor="let person of movie.credits.cast"> {{person.name}}</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

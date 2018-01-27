@@ -1,0 +1,12 @@
+.card-img-bottom {
+  color: #fff;
+  height: 20rem;
+  background:  top no-repeat;
+  background-size: cover;
+  /*max-height: 140px;*/
+  max-width: 100px;
+}
+
+.movie-poster{
+  max-height: 140px;
+}
