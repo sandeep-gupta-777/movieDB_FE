@@ -1,27 +1,24 @@
-# MasterProject
+# San Francisco Films
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.0.
+This is the frontend part of this project for enabling users search movies and actors by name. User can also see movies based on their high ratings or release dates.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Technologies used
+1. Angular 4 Framework
+2. MovieDB Apis
+3. Bootstrap 4
 
-## Code scaffolding
+## To run this project
+1. close this project
+2. Run `ng serve` for a dev server. 
+3. Navigate to `http://localhost:4200/`. 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+## Features
+1. Searh movies and artists by typing name in search bar
+2. See top rated movies
+3. See recently released movies
+4. Add or removies movie to Watch list
+5. Login or log out
 
-## Build
+## Author
+Sandeep Gupta
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
